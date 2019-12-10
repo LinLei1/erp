@@ -1,0 +1,56 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db1?useUnicode=true&characterEncoding=utf8
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    #   数据源其他配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    #    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+  thymeleaf:
+    cache: false
+    enabled: true
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+mybatis-plus:
+  #  mapper-locations:
+  #    - classpath:mapper/*/*Mapper.sys
+  global-config:
+    db-config:
+      id-type: auto
+    banner: true
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+shiro:
+  hash-algorithm-name: md5
+  hash-iterations: 2
+  anon-urls:
+  - /index.html*
+  - /sys/toLogin*
+  - /user/update*
+  - /login/login*
+  - /resources/**
+  login-url: /index.html
+  log-out-urls: /login/logout*
+  authc-urls:
+  - /**
