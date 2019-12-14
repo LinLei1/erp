@@ -37,4 +37,9 @@ public class Constast {
     * */
     public static final Integer MENU_PARENT_ID =1 ;
     public static final String USER_DEFAULT_PWD ="123456" ;
+
+    /**
+     * 商品默认图片
+     * */
+    public static final String IMAGES_DEFAULTGOODSIMG_PNG = "images/defaults.png";
 }

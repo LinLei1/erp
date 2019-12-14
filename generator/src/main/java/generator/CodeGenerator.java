@@ -34,7 +34,7 @@ public class CodeGenerator {
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
         //String projectPath = System.getProperty("user.dir");
-        gc.setOutputDir("F:\\workspaces\\trunk_erp/src/main/java");//可换为磁盘绝对路径
+        gc.setOutputDir("C:/Users/11424/Desktop/new/trunk_erp/src/main/java");//可换为磁盘绝对路径
         gc.setAuthor("老林");
         gc.setOpen(true);//生成完后是否打开代码所在文件夹
         gc.setServiceName("%sService");//设置生成的Service接口的首字母是否为I

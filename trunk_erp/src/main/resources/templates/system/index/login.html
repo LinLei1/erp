@@ -29,7 +29,8 @@
     <div class="layui-form-item input-item" id="imgCode">
         <label for="code">验证码</label>
         <input type="text" placeholder="请输入验证码" autocomplete="off" id="code" class="layui-input">
-        <img src="/resources/images/code.jpg">
+        <img id="img" src="/image/getImage" />
+        <a href='#' οnclick="javascript:changeImg()" style="color:white;"><label style="color:black;">看不清？</label></a>
     </div>
     <div class="layui-form-item">
         <button class="layui-btn layui-block" lay-filter="login" lay-submit>登录</button>
@@ -91,8 +92,19 @@
                 $(this).parent().removeClass("layui-input-active");
             }
         })
-    })
 
+
+    });
+
+   /* //验证码
+    function changeImg(){
+        var img = document.getElementById("img");
+        img.src = "/image/getImage?date=" + new Date();
+    }*/
+
+    function changeImg(){
+        $("#img").attr("src","/image/getImage?date=" + new Date());
+    }
 </script>
 </body>
 </html>

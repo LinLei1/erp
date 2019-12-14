@@ -50,6 +50,7 @@ shiro:
   - /user/update*
   - /login/login*
   - /resources/**
+  - /image/**
   login-url: /index.html
   log-out-urls: /login/logout*
   authc-urls:
