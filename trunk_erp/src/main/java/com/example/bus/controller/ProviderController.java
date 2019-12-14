@@ -94,6 +94,11 @@ public class ProviderController {
         }
     }
 
+
+    /**
+     * 更新供应商
+     *
+     * */
     @RequestMapping("updateProvider")
     public ResultObj updateProvider(ProviderVo providerVo) {
         try {
@@ -105,6 +110,11 @@ public class ProviderController {
         }
     }
 
+
+    /**
+     * 加载供应商的下拉树
+     *
+     * */
     @RequestMapping("loadAllProviderForSelect")
     public DataGridView loadAllProviderForSelect(){
         QueryWrapper<Provider> queryWrapper = new QueryWrapper<>();
